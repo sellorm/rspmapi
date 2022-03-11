@@ -61,7 +61,7 @@ each API call.
 params <- list(`_limit` = 5, `_page` = 2, name_like = "shiny")
 result <- rspm %>% 
   sources_packages(id = 1, params = params)
-lapply(result, function(x){invisible(x$name)})
+lapply(result, function(x){x$name})
 #> [[1]]
 #> [1] "BLRShiny2"
 #> 
