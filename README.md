@@ -61,19 +61,6 @@ each API call.
 params <- list(`_limit` = 5, `_page` = 2, name_like = "shiny")
 result <- rspm %>% 
   sources_packages(id = 1, params = params)
-lapply(result, function(x){x$name})
-#> [[1]]
-#> [1] "BLRShiny2"
-#> 
-#> [[2]]
-#> [1] "CLUSTShiny"
-#> 
-#> [[3]]
-#> [1] "CMShiny"
-#> 
-#> [[4]]
-#> [1] "CTAShiny"
-#> 
-#> [[5]]
-#> [1] "CTShiny"
+unlist(lapply(result, function(x){x$name}))
+#> [1] "BLRShiny2"  "CLUSTShiny" "CMShiny"    "CTAShiny"   "CTShiny"
 ```
