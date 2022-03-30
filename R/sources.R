@@ -8,6 +8,7 @@ sources <- function(instance){
 }
 
 
+
 #' Fetches lists of packages for a specific source with optional filters
 #'
 #' @param instance An rspm_instance object created with `instance()`
@@ -21,8 +22,10 @@ sources_packages <- function(instance, id, params = list()){
     id,
     "/packages"
   )
+
   return_endpoint(instance, api_url, params = params)
 }
+
 
 
 #' Fetches lists of PyPI package releases for a specific package name and source with optional filters
@@ -41,8 +44,10 @@ sources_packages_releases <- function(instance, id, name, params = list()){
     name,
     "/releases"
   )
+
   return_endpoint(instance, api_url, params = params)
 }
+
 
 
 #' Fetches lists of transactions for a given source
@@ -58,5 +63,6 @@ sources_transactions <- function(instance, id, params = list()){
     id,
     "/transactions"
   )
+
   return_endpoint(instance, api_url, params = params)
 }

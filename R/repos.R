@@ -9,7 +9,11 @@ repos <- function(instance, params = list()){
 }
 
 
+
 #' Fetches the date of the earliest calendar transaction for a repo
+#'
+#' Fetches the date of the earliest calendar transaction for a repo.
+#' Considers only transactions that are viable for calendar-based snapshots.
 #'
 #' @param instance An rspm_instance object created with `instance()`.
 #' @param id An RSPM repository ID
@@ -21,8 +25,11 @@ repos_first_transaction <- function(instance, id){
     id,
     "/first-transaction"
   )
+
   return_endpoint(instance, api_url)
 }
+
+
 
 #' Fetches lists of packages for a specific repository with optional filters
 #'
@@ -41,6 +48,7 @@ repos_packages <- function(instance, id, name = NULL, params = list()){
     "/packages/",
     name
   )
+
   return_endpoint(instance, api_url, params = params)
 }
 
@@ -62,8 +70,10 @@ repos_packages_sysreqs <- function(instance, id, name, params = list()){
     name,
     "/sysreqs"
   )
+
   return_endpoint(instance, api_url, params = params)
 }
+
 
 
 #' Fetches lists of source records for a specific repository
@@ -79,8 +89,10 @@ repos_sources <- function(instance, id, params = list()){
     id,
     "/sources"
   )
+
   return_endpoint(instance, api_url, params = params)
 }
+
 
 
 #' Fetches list of system requirements for a specific repository
@@ -96,6 +108,7 @@ repos_sysreqs <- function(instance, id, params = list()){
     id,
     "/sysreqs"
   )
+
   return_endpoint(instance, api_url, params = params)
 }
 

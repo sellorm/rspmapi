@@ -2,8 +2,10 @@ Package: rspmapi
 Title: R Wrapper Around The RStudio Package Manager API
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+    person(given = "Mark",
+           family = "Sellors",
+           email = "rstats@5vcc.com",
+           role = c("aut", "cre"))
 Description: Provides functions for querying the RStudio Package Manager API.
   If your oraganisation uses RStudio Packaeg Manager, this package will allow
   you to interact with it's API directly from R without having to construct the

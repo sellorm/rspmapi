@@ -12,5 +12,6 @@ repos_first_transaction(instance, id)
 \item{id}{An RSPM repository ID}
 }
 \description{
-Fetches the date of the earliest calendar transaction for a repo
+Fetches the date of the earliest calendar transaction for a repo.
+Considers only transactions that are viable for calendar-based snapshots.
 }

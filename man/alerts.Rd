@@ -10,5 +10,5 @@ alerts(instance)
 \item{instance}{An rspm_instance object created with \code{instance()}.}
 }
 \description{
-Fetches a list of alerts
+Fetches a list of alerts for events such as excessive file usage
 }

@@ -30,27 +30,34 @@ return_endpoint <- function(instance, endpoint, params = list()){
 #' @export
 instance <- function(url, silent = FALSE){
   rspm <- list(url = url)
+
   instance_data <- list(
     url = url,
     version = status(rspm)$version
   )
+
   connected_msg <- paste0("Connected to RStudio Package Manager instance:",
                           "\n    ",
                           url)
+
   if (isFALSE(silent)) {
     message(connected_msg)
   }
+
   class(instance_data) <- c("rspm_instance", class(instance_data))
+
   instance_data
 }
+
+
 
 #' @export
 print.rspm_instance <- function(x, ...) {
   print.default(paste0(
     "Package Manager instance ",
-    instance$url,
+    x$url,
     " (version ",
-    instance$version,
+    x$version,
     ")"
   ))
 }
